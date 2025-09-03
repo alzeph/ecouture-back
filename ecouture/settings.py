@@ -92,7 +92,20 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
     # 'default': dj_database_url.config(default=os.environ.get("DATABASE_URL"))
+    
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',  # moteur PostgreSQL
+#         'NAME': 'ecouture_db',                        # nom de la base
+#         'USER': 'ecouture_db_user',                         # utilisateur
+#         'PASSWORD': 'eR5bkj7uqd3ntHom8Mpn7eRpAPBBslH4',                     # mot de passe
+#         'HOST': 'dpg-d2s6ocm3jp1c739n8r30-a.ecouture-back.onrender.com',    # host de la base
+#         'PORT': '5432',                               # port
+#     }
+# }
+
 
 
 # Password validation
