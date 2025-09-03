@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-$gi6qcc3lm0-+ua5b9*@dkdbys!na^eu**9va!#gr4$$y(a3kd
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*",] #'ecouture-back.onrender.com']
+ALLOWED_HOSTS = ["*",]  # 'ecouture-back.onrender.com']
 
 
 # Application definition
@@ -181,7 +181,12 @@ else:  # production
     # En production : lister explicitement les domaines autorisés
     CORS_ALLOWED_ORIGINS = [
         "https://app.ecouture.com",
-        "https://ecouture-front-ten.vercel.app"
+        "https://ecouture-front-ten.vercel.app",
+        "https://ecouture-front.vercel.app",
+    ]
+
+    CORS_ALLOWED_ORIGIN_REGEXES = [
+        r"^https://ecouture.*\.vercel\.app$",
     ]
 
     CORS_ALLOW_CREDENTIALS = True
