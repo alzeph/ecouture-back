@@ -172,7 +172,7 @@ if DEBUG:  # développement local
     }
 else:  # production
     SIMPLE_JWT = {
-        "ACCESS_TOKEN_LIFETIME": timedelta(minutes=3600),
+        "ACCESS_TOKEN_LIFETIME": timedelta(minutes=60*60*8),
         "REFRESH_TOKEN_LIFETIME": timedelta(days=1),
         "ROTATE_REFRESH_TOKENS": False,
         "BLACKLIST_AFTER_ROTATION": True,
@@ -181,6 +181,7 @@ else:  # production
     # En production : lister explicitement les domaines autorisés
     CORS_ALLOWED_ORIGINS = [
         "https://app.ecouture.com",
+        "https://ecouture-front-ten.vercel.app"
     ]
 
     CORS_ALLOW_CREDENTIALS = True
