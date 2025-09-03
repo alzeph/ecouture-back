@@ -162,7 +162,15 @@ if DEBUG:  # développement local
         "http://localhost:6006",
         "http://localhost:5173",
         "http://192.168.1.13:5173",
+        "https://app.ecouture.com",
+        "https://ecouture-front-ten.vercel.app",
+        "https://ecouture-front.vercel.app",
     ]
+
+    CORS_ALLOWED_ORIGIN_REGEXES = [
+        r"^https://ecouture.*\.vercel\.app$",
+    ]
+
     CORS_ALLOW_CREDENTIALS = True
     SIMPLE_JWT = {
         "ACCESS_TOKEN_LIFETIME": timedelta(minutes=60*60*24),
