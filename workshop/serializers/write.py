@@ -110,7 +110,6 @@ class WorkerWriteForWorkshopSerializer(serializers.ModelSerializer):
         user_data = validated_data.pop("user")
         user_serializer = UserWriteSerializer(data=user_data)
         user_serializer.is_valid(raise_exception=True)
-        validated_data.pop("is_owner")
         with transaction.atomic():
             workshop = workshop_serializer.save()
             user= user_serializer.save()
